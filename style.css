@@ -1,0 +1,462 @@
+/* ========================================
+   COLOUR PALETTE
+======================================== */
+
+:root {
+    --cream: #F7F4EE;
+    --white: #FFFFFF;
+    --espresso: #49352A;
+    --caramel: #B78052;
+    --caramel-dark: #8A5A37;
+    --text: #343434;
+    --muted: #77716B;
+    --border: #E7DED2;
+    --badge: #F2E8DC;
+    --highlight: #FCF9F4;
+
+    --shadow: 0 4px 18px rgba(73, 53, 42, 0.05);
+}
+
+
+/* ========================================
+   GENERAL STYLES
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--cream);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    width: min(100% - 40px, 900px);
+    margin: 0 auto;
+}
+
+p {
+    margin: 0 0 18px;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+a {
+    color: var(--caramel-dark);
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--espresso);
+    text-decoration: underline;
+}
+
+a:focus-visible {
+    outline: 2px solid var(--caramel-dark);
+    outline-offset: 4px;
+    border-radius: 2px;
+}
+
+strong {
+    color: var(--espresso);
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.hero {
+    background-color: var(--white);
+    border-top: 5px solid var(--caramel);
+    border-bottom: 1px solid var(--border);
+    padding: 44px 0 36px;
+}
+
+.hero h1 {
+    margin: 0 0 24px;
+    color: var(--espresso);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    font-weight: 600;
+    letter-spacing: -1.5px;
+    line-height: 1.15;
+}
+
+
+/* ========================================
+   CONTACT INFORMATION
+======================================== */
+
+.contact-info ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 12px 28px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.contact-info li {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+.contact-label {
+    margin-bottom: 3px;
+    color: var(--muted);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.professional-cv-link {
+    align-self: center;
+    margin-left: auto;
+}
+
+.professional-cv-link a {
+    display: inline-block;
+    padding: 9px 15px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--espresso);
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.professional-cv-link a:hover {
+    background-color: var(--badge);
+    border-color: var(--caramel);
+    text-decoration: none;
+}
+
+
+/* ========================================
+   MAIN CONTENT
+======================================== */
+
+main.container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.card {
+    margin-bottom: 24px;
+    padding: 30px 32px;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition:
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.card:hover {
+    border-color: #DCCBBB;
+    box-shadow: 0 7px 24px rgba(73, 53, 42, 0.08);
+}
+
+
+/* ========================================
+   SECTION HEADINGS AND ICONS
+======================================== */
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 22px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+    color: var(--espresso);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.55rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.section-icon {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    background-color: var(--badge);
+    border-radius: 9px;
+    color: var(--caramel-dark);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1;
+}
+
+
+/* ========================================
+   SUBHEADINGS
+======================================== */
+
+h3 {
+    margin: 26px 0 10px;
+    color: var(--espresso);
+    font-size: 1.12rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+h3:first-of-type {
+    margin-top: 0;
+}
+
+.date {
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+
+/* ========================================
+   BARISTA QUALIFICATION
+======================================== */
+
+.qualification-card {
+    background-color: var(--highlight);
+    border-left: 5px solid var(--caramel);
+}
+
+.qualification-title {
+    margin-bottom: 3px;
+    font-size: 1.04rem;
+}
+
+.qualification-date {
+    margin-bottom: 18px;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+
+/* ========================================
+   DETAIL LISTS
+======================================== */
+
+.detail-list {
+    margin: 18px 0 0;
+    padding-left: 22px;
+}
+
+.detail-list li {
+    margin-bottom: 6px;
+    padding-left: 4px;
+}
+
+.detail-list li::marker {
+    color: var(--caramel);
+}
+
+
+/* ========================================
+   SKILL BADGES
+======================================== */
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills span {
+    display: inline-block;
+    padding: 7px 13px;
+    background-color: var(--badge);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    color: var(--espresso);
+    font-size: 0.88rem;
+    line-height: 1.5;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.skills span:hover {
+    background-color: #EBD9C6;
+    border-color: var(--caramel);
+}
+
+
+/* ========================================
+   HOSPITALITY EXPERIENCE
+======================================== */
+
+.experience-list {
+    margin: 20px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.experience-list li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px 12px;
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    background-color: var(--highlight);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+}
+
+.experience-list li::before {
+    content: "•";
+    color: var(--caramel);
+    font-size: 1.1rem;
+}
+
+.experience-list strong {
+    font-weight: 700;
+}
+
+.role {
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer {
+    padding: 24px 0;
+    border-top: 1px solid var(--border);
+    background-color: var(--white);
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 650px) {
+
+    .container {
+        width: min(100% - 28px, 900px);
+    }
+
+    .hero {
+        padding: 32px 0 26px;
+    }
+
+    .hero h1 {
+        margin-bottom: 22px;
+        font-size: 2.5rem;
+    }
+
+    .contact-info ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .contact-info li {
+        overflow-wrap: anywhere;
+    }
+
+    .professional-cv-link {
+        margin-left: 0;
+        align-self: start;
+    }
+
+    .professional-cv-link a {
+        text-align: center;
+    }
+
+    main.container {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .card {
+        margin-bottom: 18px;
+        padding: 23px 20px;
+        border-radius: 10px;
+    }
+
+    .section-heading {
+        gap: 10px;
+        margin-bottom: 18px;
+        padding-bottom: 12px;
+        font-size: 1.35rem;
+    }
+
+    .section-icon {
+        width: 31px;
+        height: 31px;
+        font-size: 1rem;
+    }
+
+    .skills {
+        gap: 8px;
+    }
+
+    .skills span {
+        padding: 6px 11px;
+        font-size: 0.84rem;
+    }
+
+    .experience-list li {
+        gap: 4px 8px;
+        padding: 11px 12px;
+    }
+
+}
+
+
+/* ========================================
+   REDUCED MOTION ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+
+}
