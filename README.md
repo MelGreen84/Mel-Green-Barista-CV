@@ -1,2 +1,2 @@
-# -Mel-Green-Barista-CV
+# Mel-Green-Barista-CV
 Barista and hospitality CV for Mel Green
